@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <div class="search-container">
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <button id="searchBtn">Search</button>
+        </div>
+        <div class="weather-info" id="weatherInfo">
+            <div class="weather-card">
+                <h2 id="cityName">-</h2>
+                <div class="weather-details">
+                    <p>Temperature: <span id="temperature">-</span>°C</p>
+                    <p>Humidity: <span id="humidity">-</span>%</p>
+                    <p>Conditions: <span id="conditions">-</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
+<!-- This Weather App is a simple web-based application that allows users to enter a city name and retrieve its weather information. The app uses JavaScript to fetch weather data from a local JSON file (weatherData.json), and dynamically displays the weather details such as temperature, humidity, and general conditions. The HTML structure includes an input field for entering the city name, a search button to trigger the weather lookup, and sections to display the weather information. The application makes use of XMLHttpRequest (XHR) to asynchronously fetch the JSON file and update the webpage without reloading. Error handling is included to manage issues like invalid city names or network failures. Although the weather data is static and stored locally, the app demonstrates core principles of DOM manipulation, asynchronous programming with XHR, and user interaction with dynamic content.
+
+Workflow:
+The user enters a city name and clicks the "Search" button.
+
+The JavaScript code fetches weather data from a local JSON file and updates the UI with the weather information if the city is found.
+
+If there is an error (invalid city or network issues), appropriate messages are displayed to the user, and the data fields are reset. -->

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Login Form</h2>
+    <form id="loginForm">
+        <input type="text" id="loginUsername" placeholder="Username" required><br><br>
+        <input type="password" id="loginPassword" placeholder="Password" required><br><br>
+        <button type="submit" id="loginBtn">Login</button>
+    </form>
+
+    <h2>Registration Form</h2>
+    <form id="registrationForm">
+        <input type="text" id="name" placeholder="Full Name" required><br><br>
+        <input type="email" id="email" placeholder="Email" required><br><br>
+        <input type="tel" id="mobile" placeholder="Mobile Number" required><br><br>
+        <input type="date" id="dob" placeholder="Date of Birth" required><br><br>
+        <input type="text" id="city" placeholder="City" required><br><br>
+        <textarea id="address" placeholder="Address" required></textarea><br><br>
+        <button type="submit" id="registerBtn">Register</button>
+    </form>
+
+    <button id="viewUsersBtn">View Users</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- 1. Login Form Handling:
+Event Listener: The submit event of the login form is intercepted using addEventListener. The validateLogin() function is invoked when the form is submitted.
+
+Validation: The username and password fields are checked for emptiness. If either is empty, the user is prompted to fill in both fields.
+
+Local Storage: For simplicity, this example doesn’t use an actual server but can be modified to retrieve usernames and passwords from localStorage instead of hardcoding them.
+
+2. Registration Form Handling:
+Input Validation: Each input field in the registration form (name, email, mobile number, dob, city, and address) is validated. If a field is empty, an error message is displayed.
+
+Regex for Validation: Regular expressions (regex) are used for validating the email and mobile number format.
+
+Email: Checks that the input contains @ and .com.
+
+Mobile: Ensures the input is exactly 10 digits long.
+
+Storing Data: When the form is valid, the user data is stored in localStorage as an array of user objects. Each user object contains the entered details. The array is saved back to localStorage to persist the data even after page reloads.
+
+Success Message: After successful submission, an alert is shown, and the form is reset.
+
+3. AJAX Simulation (Using Local Storage):
+Simulated POST Request: The use of localStorage mimics the functionality of a backend API. The data entered by the user is "posted" by storing it in localStorage instead of sending it to a server.
+
+GET Request Simulation: Data retrieval is done using localStorage.getItem(), where the user data is fetched, parsed, and displayed dynamically.
+
+4. Dynamic User List (in users.html):
+Displaying Users: When the user clicks the "View Users" button, they are redirected to users.html, which loads and displays a list of registered users. The users are retrieved from localStorage and displayed using DOM manipulation.
+
+DOM Manipulation: Elements like div and ul are dynamically created in JavaScript and populated with the user data from localStorage. This allows the users to be shown on the page without refreshing or needing server interaction.
+
+5. Local Storage Usage:
+Storing Data: Data is saved in the browser's localStorage (key-value pairs). This method allows persistence across page reloads without needing a database or server.
+
+Retrieving Data: The stored data is retrieved using localStorage.getItem() and parsed using JSON.parse() to make it usable as a JavaScript object.
+
+ -->
